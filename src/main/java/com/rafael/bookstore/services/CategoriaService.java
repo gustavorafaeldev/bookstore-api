@@ -1,5 +1,6 @@
 package com.rafael.bookstore.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.hibernate.ObjectNotFoundException;
@@ -18,5 +19,9 @@ public class CategoriaService {
     public Categoria findById(Integer id) {
         Optional<Categoria> obj = categoriaRepository.findById(id);
         return obj.orElseThrow(() -> new com.rafael.bookstore.exceptions.ObjectNotFoundException("Objeto não encontrado! Id: "+ id+ ", Tipo: "+ Categoria.class.getName()));
+    }
+
+    public List<Categoria> findAll() {
+        return categoriaRepository.findAll();
     }
 }
