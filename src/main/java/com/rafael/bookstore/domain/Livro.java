@@ -30,6 +30,17 @@ public class Livro implements Serializable{
         super();
     }
 
+    
+    public Livro(Integer id, String titulo, String nomeAutor, String texto, Categoria categoria) {
+        this.id = id;
+        this.titulo = titulo;
+        this.nomeAutor = nomeAutor;
+        this.texto = texto;
+        this.categoria = categoria;
+    }
+
+
+
     public Integer getId() {
         return id;
     }
