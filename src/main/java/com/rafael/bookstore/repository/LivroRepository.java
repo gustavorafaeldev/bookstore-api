@@ -3,7 +3,7 @@ package com.rafael.bookstore.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.rafael.bookstore.domain.Livro;
+import com.rafael.bookstore.Dtos.domain.Livro;
 
 @Repository
 public interface LivroRepository extends JpaRepository<Livro, Integer>{

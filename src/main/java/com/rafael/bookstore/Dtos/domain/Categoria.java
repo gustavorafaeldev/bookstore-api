@@ -1,4 +1,4 @@
-package com.rafael.bookstore.domain;
+package com.rafael.bookstore.Dtos.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;

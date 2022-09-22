@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.rafael.bookstore.Dtos.CategoriaDTO;
-import com.rafael.bookstore.domain.Categoria;
+import com.rafael.bookstore.Dtos.domain.Categoria;
 import com.rafael.bookstore.services.CategoriaService;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 

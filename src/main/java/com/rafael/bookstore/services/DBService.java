@@ -5,8 +5,8 @@ import java.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rafael.bookstore.domain.Categoria;
-import com.rafael.bookstore.domain.Livro;
+import com.rafael.bookstore.Dtos.domain.Categoria;
+import com.rafael.bookstore.Dtos.domain.Livro;
 import com.rafael.bookstore.repository.CategoriaRepository;
 import com.rafael.bookstore.repository.LivroRepository;
 
