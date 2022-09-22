@@ -1,6 +1,6 @@
 package com.rafael.bookstore.services;
 
-import com.rafael.bookstore.Dtos.domain.Livro;
+import com.rafael.bookstore.domain.Livro;
 import com.rafael.bookstore.exceptions.ObjectNotFoundException;
 import com.rafael.bookstore.repository.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +15,12 @@ public class LivroService {
     @Autowired
     private LivroRepository repository;
 
-    public List<Livro> findAll() {
-        return repository.findAll();
+    @Autowired
+    private CategoriaService categoriaService;
+
+    public List<Livro> findAll(Integer id_cat) {
+        categoriaService.findById(id_cat);
+        return repository.findAllByCategoria(id_cat);
     }
 
     public Livro findById(Integer id) {

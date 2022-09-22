@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
-import com.rafael.bookstore.Dtos.domain.Categoria;
+import com.rafael.bookstore.domain.Categoria;
 import com.rafael.bookstore.repository.CategoriaRepository;
 
 @Service
