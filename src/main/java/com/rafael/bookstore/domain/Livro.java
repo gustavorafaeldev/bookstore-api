@@ -9,8 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import org.hibernate.annotations.ManyToAny;
-
 @Entity
 public class Livro implements Serializable{
 
@@ -19,6 +17,7 @@ public class Livro implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    
     private String titulo;
     private String nomeAutor;
     private String texto;
