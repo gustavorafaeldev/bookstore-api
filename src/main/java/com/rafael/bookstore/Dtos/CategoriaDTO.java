@@ -5,12 +5,18 @@ import java.io.Serializable;
 import com.rafael.bookstore.domain.Categoria;
 
 public class CategoriaDTO implements Serializable{
-    
+
+
     private Integer id;
 
     private String nome;
 
     private String descricao;
+
+
+    public CategoriaDTO() {
+
+    }
 
     public CategoriaDTO(Categoria obj) {
         super();
