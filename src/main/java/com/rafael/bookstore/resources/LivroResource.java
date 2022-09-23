@@ -53,4 +53,10 @@ public class LivroResource {
         Livro newObj = service.update(id, obj);
         return ResponseEntity.ok().body(newObj);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Integer id) {
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }
