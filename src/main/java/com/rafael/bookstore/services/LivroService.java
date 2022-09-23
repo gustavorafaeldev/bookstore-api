@@ -29,9 +29,10 @@ public class LivroService {
                 " Id:"+ id+", Tipo: "+ Livro.class.getName()));
     }
 
-    public Livro create(Livro livro) {
-        livro.setId(null);
-        return repository.save(livro);
+    public Livro create(Integer id_cat,Livro obj) {
+        obj.setId(null);
+        obj.setCategoria(categoriaService.findById(id_cat));
+        return repository.save(obj);
     }
 
     public Livro update(Integer id, Livro obj) {
