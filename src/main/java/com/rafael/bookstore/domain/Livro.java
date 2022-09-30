@@ -2,13 +2,10 @@ package com.rafael.bookstore.domain;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.Length;
@@ -30,6 +27,7 @@ public class Livro implements Serializable{
     @Length(min = 3, max = 50, message = "Campo AUTOR deve ter entre 3 e 50 caracteres")
     private String nomeAutor;
 
+    @Column(length = 2000000, nullable = false)
     @NotEmpty(message = "Campo TEXTO requerido")
     private String texto;
 
